@@ -1,8 +1,9 @@
 #include <iostream>
 
+
 class Nodo {
   public:
-    Nodo(int x, int y, int coste_estimado, int pared_num);
+    Nodo(int x, int y, int x_m, int y_m, int coste_punto);
     void set_coste(int coste) { this->coste = coste; }
     void set_coste_acumulado(int coste_estimado_, int coste) { this->coste_acumulado = coste_estimado_ + coste; }
     void set_pared(bool pared) { this->pared = pared; } // en base a true o false se pone el nodo como pared o no
@@ -14,7 +15,7 @@ class Nodo {
     int get_coste_acumulado() { return coste_acumulado; }
     bool get_pared() { return pared; }
     bool operator < (const Nodo& nodo) const { return coste_acumulado < nodo.coste_acumulado; } // siempre cojo el más pequeño
-    
+
 
 
   private:
