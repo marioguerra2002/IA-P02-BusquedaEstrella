@@ -1,0 +1,12 @@
+Instancia: ./inputs/M_3.txt
+Filas: 5 Columnas: 5
+Nodo inicio: 4 4
+Nodo final: 1 0
+Nodos generados: 50
+Nodos inspeccionados: 13
+Camino: 
+1****
+4*1**
+0111*
+01***
+011*3

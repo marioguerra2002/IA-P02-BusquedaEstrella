@@ -18,14 +18,17 @@ class Nodo {
     void set_pared() { this->pared = pared; } // en base a true o false se pone el nodo como pared o no
     void set_coste_estimado(int meta_x, int x, int meta_y, int y);
     void set_padre(int x, int y) { padre = std::make_pair(x, y); }
+    void set_valor(int valor) { this->valor = valor; }
     int get_x() { return x; }
     int get_y() { return y; }
     int get_coste() { return coste; }
     int get_coste_estimado() { return coste_estimado; }
     int get_coste_acumulado() { return coste_acumulado; }
     int get_valor() { return coste; }
+    std::pair<int, int> get_padre() { return padre; }
     bool operator < (const Nodo& nodo) const { return coste_acumulado < nodo.coste_acumulado; } // siempre cojo el más pequeño
     bool operator > (const Nodo& nodo) const { return coste_acumulado > nodo.coste_acumulado; }
+    bool tiene_padre() const { return padre.first != -1 && padre.second != -1; } // si tiene padre, devuelve true
     void printNodo();
     void operator = (const Nodo& nodo) {
       x = nodo.x;
@@ -52,4 +55,5 @@ class Nodo {
     bool pared = false; // Indica si el nodo es una pared
     int coste_acumulado; // Coste acumulado de llegar a este nodo (fn)
     std::pair<int, int> padre; // Coordenadas del nodo padre
+    char valor; // valor del nodo
 };
