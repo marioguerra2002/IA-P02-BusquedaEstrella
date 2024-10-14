@@ -1,4 +1,5 @@
-//#include "matriz_lab.h"
+#include "matriz_lab.h"
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -93,57 +94,6 @@ int main (int argc, char *argv[]) {
   }
   std::cout << "Nodo inicio: " << x_inicio << " " << y_inicio << std::endl;
   std::cout << "Nodo final: " << x_meta << " " << y_meta << std::endl;
-  // int auxiliar_vect;
-  // char auxiliar_vect_string;
-  // for (int i = 0; i < matriz.size(); i++) {
-  //   for (int j = 0; j < matriz[i].size(); j++) {
-  //     auxiliar_vect_string = input_vector[i][j];
-
-  //     std::cout << auxiliar_vect_string << " ";
-  //   }
-  //   std::cout << std::endl;
-  // }
-  // for (int i = 0; i < filas; ++i) {
-  //   for (int j = 0; j < columnas; ++j) {
-  //     std::cout << 
-  //   }
-  // }
-
-  // std::vector<std::vector<int> > matriz(filas, std::vector<int>(columnas)); // matriz de filas x columnas
-  // std::string aux;
-  // for (int i = 0; i < filas; i++) {
-  //   for (int j = 0; j < columnas; j++) {
-  //     aux += input_vector[i][j];
-  //     matriz[i][j] = std::stoi(aux);
-  //     aux.clear();
-  //   }
-  // }
-  // for (int i = 0; i < filas; i++) {
-  //   for (int j = 0; j < columnas; j++) {
-  //     std::cout << matriz[i][j] << " ";
-  //   }
-  //   std::cout << std::endl;
-  // }
-  // // lo optimo sería pasar la entrada directamente a un vector de vectores de enteros
-  // std::vector<std::vector<int> > matriz;
-  // std::string aux;
-  // for (int i = 0; i < filas; i++) {
-  //   for (int j = 0; j < columnas; j++) {
-  //     aux += input_vector[i][j];
-  //     matriz[i][j] = std::stoi(aux);
-  //     aux.clear();
-  //   }
-  //   std::cout << std::endl;
-  // }
-  // for (int i = 0; i < filas; i++) {
-  //   for (int j = 0; j < columnas; j++) {
-  //     std::cout << matriz[i][j] << " ";
-  //   }
-  //   std::cout << std::endl;
-  // }
-
-  
-  
-
+  MatrizLab matriz_lab(matriz, std::make_pair(x_inicio, y_inicio), std::make_pair(x_meta, y_meta), filas, columnas);
   return 0;
 }

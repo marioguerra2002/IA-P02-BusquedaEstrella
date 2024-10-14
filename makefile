@@ -1,6 +1,6 @@
 p01_chainCC=g++ -std=c++20
 CFLAGS=-O0 -g -Wall
-DEPS = matriz_distancia.h nodo.h grafo.h
+DEPS = matriz_distancia.h nodo.h
 OBJ = main.o
 
 SRC = './src/'
